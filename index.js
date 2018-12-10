@@ -1,8 +1,8 @@
 const csvjson = require('csvjson');
 const { getCsvData } = require('./utils/utils');
-const csvPath = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTdqj0TGM8nEMJrQyUPzOyNop4CMDqpzbMaZZYf3aCtVqMCxGJ0W-jf3J8dayz3KtI1z4KScuvs7Lqf/pub?output=csv';
+const { constants } = require('./constants');
 
-const csvToJson = async function() {
+const csvToJson = async function(csvPath) {
   try {
     const csvData = await getCsvData(csvPath, {});
     const out = csvjson.toObject(csvData);
@@ -18,7 +18,7 @@ const csvToJson = async function() {
 }
 
 exports.handler = () => {
-  return csvToJson();
+  return csvToJson(constants.CSV_PATH);
 };
 
 
