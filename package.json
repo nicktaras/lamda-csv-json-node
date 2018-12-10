@@ -1,0 +1,15 @@
+{
+  "name": "csv-to-json",
+  "version": "1.0.0",
+  "description": "a simple function made for lambda to convert a specific csv file to json",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "nick taras",
+  "license": "ISC",
+  "dependencies": {
+    "csvjson": "^5.1.0"
+  }
+}
+
